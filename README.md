@@ -34,7 +34,9 @@ All three should print a version number. If one says command not found, close Te
 
 ### 2. Build Vencord with the plugin
 
-Copy this whole block and paste it into Terminal:
+Already building Vencord from source (official or any fork)? Use that folder instead of cloning a new one: `cd` into it and run only the last three lines below. Your other plugins and settings are kept, Vencord stores them outside that folder.
+
+Otherwise copy this whole block and paste it into Terminal:
 
 ```sh
 cd ~
@@ -56,6 +58,12 @@ pnpm inject
 ```
 
 It asks which Discord to patch, pick Stable (or whichever you use) with the arrow keys and press enter. It may ask for your password, that's fine.
+
+If it fails with `Failed to download installer: 404 Not Found`, your Vencord copy is pointing at an installer file that was renamed. Run this instead, it does the same thing:
+
+```sh
+node src/userplugins/streamBitrateBooster/inject.mjs
+```
 
 Open Discord, go to Settings, scroll down to the Vencord section, click Plugins, search for StreamBitrateBooster and turn it on.
 
@@ -86,9 +94,9 @@ Then restart Discord. No need to inject again.
 
 Plugin doesn't show up in the list: make sure `pnpm build` ran without errors after cloning the plugin, then fully quit and reopen Discord.
 
-Vencord itself isn't showing in settings: Discord probably updated itself and removed the patch. Quit Discord and run `pnpm inject` again from the Vencord folder.
+Vencord itself isn't showing in settings: Discord probably updated itself and removed the patch. Quit Discord and run `pnpm inject` again from the Vencord folder (or the `inject.mjs` command above if that 404s).
 
-Want it gone: quit Discord, run `pnpm uninject` in the Vencord folder.
+Want it gone: quit Discord, run `pnpm uninject` in the Vencord folder. If that gives the 404 error, run `node src/userplugins/streamBitrateBooster/inject.mjs --uninstall` instead.
 
 ## License
 
