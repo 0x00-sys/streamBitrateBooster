@@ -1,5 +1,7 @@
 # StreamBitrateBooster
 
+<img src="screenshot.png" alt="StreamBitrateBooster settings in Discord" width="420">
+
 Vencord plugin that forces the bitrate, resolution, framerate and codec Discord uses for your screenshare.
 
 Made because Discord on macOS 27 started capping streams at around 600 kbps for no reason. Might help on other platforms too.
