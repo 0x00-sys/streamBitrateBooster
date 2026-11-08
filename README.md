@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Discord has fixed the issue, so you probably don't need this plugin anymore.** On macOS 27.3 with Discord Stable 0.0.421, screensharing works normally again and streams are no longer capped at around 600 kbps. This repo is archived and won't get updates.
+
 # StreamBitrateBooster
 
 <img src="screenshot.png" alt="StreamBitrateBooster settings in Discord" width="420">
